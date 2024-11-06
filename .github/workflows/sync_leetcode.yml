@@ -18,4 +18,4 @@ jobs:
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: submissions/
           verbose: true
-          commit-header: "add(leetcode-sync):"
+          commit-header: "submit:"
