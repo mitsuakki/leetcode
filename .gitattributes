@@ -1,0 +1,17 @@
+# Java files
+*.java linguist-vendored=false
+*.java linguist-generated=false
+*.java linguist-documentation=false
+*.java linguist-detectable=true
+
+# SQL files
+*.sql linguist-vendored=false
+*.sql linguist-generated=false
+*.sql linguist-documentation=false
+*.sql linguist-detectable=true
+
+# Shell scripts
+*.sh linguist-vendored=false
+*.sh linguist-generated=false
+*.sh linguist-documentation=false
+*.sh linguist-detectable=true
