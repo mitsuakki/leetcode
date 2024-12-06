@@ -14,6 +14,7 @@
 | 0584 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | N/A | N/A |
 | 0595 | [Big Countries](https://leetcode.com/problems/big-countries/) | N/A | N/A |
 | 0620 | [Not Boring Movies](https://leetcode.com/problems/not-boring-movies/) | N/A | N/A |
+| 1013 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | N/A | N/A |
 | 1153 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | N/A | N/A |
 | 1161 | [Project Employees I](https://leetcode.com/problems/project-employees-i/) | N/A | N/A |
 | 1258 | [Article Views I](https://leetcode.com/problems/article-views-i/) | N/A | N/A |
@@ -27,4 +28,19 @@
 | 1908 | [Recyclable And Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | N/A | N/A |
 | 2087 | [Confirmation Rate](https://leetcode.com/problems/confirmation-rate/) | N/A | N/A |
 | 2495 | [Number Of Unique Subjects Taught By Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/) | N/A | N/A |
+| 2775 | [Generate Fibonacci Sequence](https://leetcode.com/problems/generate-fibonacci-sequence/) | N/A | N/A |
 | 3062 | [Create A Dataframe From List](https://leetcode.com/problems/create-a-dataframe-from-list/) | N/A | N/A |
+| 3063 | [Method Chaining](https://leetcode.com/problems/method-chaining/) | N/A | N/A |
+| 3064 | [Reshape Data Concatenate](https://leetcode.com/problems/reshape-data-concatenate/) | N/A | N/A |
+| 3065 | [Display The First Three Rows](https://leetcode.com/problems/display-the-first-three-rows/) | N/A | N/A |
+| 3066 | [Create A New Column](https://leetcode.com/problems/create-a-new-column/) | N/A | N/A |
+| 3067 | [Modify Columns](https://leetcode.com/problems/modify-columns/) | N/A | N/A |
+| 3068 | [Rename Columns](https://leetcode.com/problems/rename-columns/) | N/A | N/A |
+| 3069 | [Change Data Type](https://leetcode.com/problems/change-data-type/) | N/A | N/A |
+| 3070 | [Fill Missing Data](https://leetcode.com/problems/fill-missing-data/) | N/A | N/A |
+| 3071 | [Drop Duplicate Rows](https://leetcode.com/problems/drop-duplicate-rows/) | N/A | N/A |
+| 3072 | [Reshape Data Pivot](https://leetcode.com/problems/reshape-data-pivot/) | N/A | N/A |
+| 3073 | [Reshape Data Melt](https://leetcode.com/problems/reshape-data-melt/) | N/A | N/A |
+| 3074 | [Select Data](https://leetcode.com/problems/select-data/) | N/A | N/A |
+| 3075 | [Drop Missing Data](https://leetcode.com/problems/drop-missing-data/) | N/A | N/A |
+| 3076 | [Get The Size Of A Dataframe](https://leetcode.com/problems/get-the-size-of-a-dataframe/) | N/A | N/A |
