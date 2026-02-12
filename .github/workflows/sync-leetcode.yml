@@ -1,0 +1,87 @@
+name: Sync Leetcode
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Sync LeetCode submissions
+        uses: joshcai/leetcode-sync@v1.7
+        with:
+          github-token: ${{ github.token }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: submissions/
+          verbose: true
+          commit-header: "submit:"
+
+  update-readme:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install --upgrade pip
+
+      - name: Keep only newest solution per problem
+        run: |
+          for dir in submissions/*; do
+            if [ -d "$dir" ]; then
+              # Only consider source code files
+              newest_file=$(ls -t "$dir"/*.{java,py,cpp,rs,sql,ts,js,c,m} 2>/dev/null | head -n 1)
+              for file in "$dir"/*; do
+                if [[ "$file" != "$newest_file" && "$file" =~ \.(java|py|cpp|rs|sql|ts|js|c|m)$ ]]; then
+                  rm -f "$file"
+                fi
+              done
+            fi
+          done
+
+      - name: Generate README
+        run: python .github/script.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
+          git add .
+      
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+      
+          git commit -m "chore: keep only latest solution per problem + update README"
+          git pull --rebase origin main
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
