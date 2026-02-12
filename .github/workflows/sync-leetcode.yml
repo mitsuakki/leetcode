@@ -52,11 +52,30 @@ jobs:
 
       - name: Keep only newest solution per problem
         run: |
+          shopt -s nullglob
           for dir in submissions/*; do
             if [ -d "$dir" ]; then
-              # Only consider source code files
-              newest_file=$(ls -t "$dir"/*.{java,py,cpp,rs,sql,ts,js,c,m} 2>/dev/null | head -n 1)
-              for file in "$dir"/*; do
+              files=("$dir"/*.{java,py,cpp,rs,sql,ts,js,c,m})
+              count=${#files[@]}
+
+              if (( count > 2 )); then
+                preferred=()
+                for ext in rs cpp cc cxx; do
+                  for f in "$dir"/*."$ext"; do
+                    preferred+=("$f")
+                  done
+                done
+
+                if [ ${#preferred[@]} -gt 0 ]; then
+                  newest_file=$(ls -t "${preferred[@]}" 2>/dev/null | head -n 1)
+                else
+                  newest_file=$(ls -t "${files[@]}" 2>/dev/null | head -n 1)
+                fi
+              else
+                newest_file=$(ls -t "${files[@]}" 2>/dev/null | head -n 1)
+              fi
+
+              for file in "${files[@]}"; do
                 if [[ "$file" != "$newest_file" && "$file" =~ \.(java|py|cpp|rs|sql|ts|js|c|m)$ ]]; then
                   rm -f "$file"
                 fi
