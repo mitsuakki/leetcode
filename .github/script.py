@@ -27,6 +27,10 @@ def generate_readme(submissions_dir, output_file):
     header = "| #   | Title                                      | Runtime   | Memory    |\n|-----|--------------------------------------------|-----------|-----------|\n"
     rows = []
 
+    # Ensure submissions directory exists to avoid crashing when empty/missing
+    if not os.path.exists(submissions_dir):
+        os.makedirs(submissions_dir, exist_ok=True)
+
     for entry in os.listdir(submissions_dir):
         path = os.path.join(submissions_dir, entry)
         if os.path.isdir(path) and '-' in entry:
