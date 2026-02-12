@@ -5,6 +5,11 @@ permissions:
 
 on:
   workflow_dispatch:
+    inputs:
+      preferred_languages:
+        description: 'Comma-separated preferred languages (exts), e.g. rs,cpp,py,java'
+        required: false
+        default: 'rs,cpp,py,java'
   schedule:
     - cron: "0 0 * * *"
 
@@ -84,7 +89,7 @@ jobs:
         run: pip install --upgrade pip
 
       - name: Generate README
-        run: python .github/script.py
+        run: python .github/scripts/generation.py
 
       - name: Commit and Push Changes
         run: |
@@ -103,4 +108,5 @@ jobs:
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
 

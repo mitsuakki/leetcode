@@ -1,0 +1,41 @@
+name: Clean Submissions
+
+on:
+  workflow_dispatch:
+    inputs:
+      preferred_languages:
+        description: 'Comma-separated preferred languages (exts), e.g. rs,cpp,py,java'
+        required: false
+        default: 'rs,cpp,py,java'
+
+permissions:
+  contents: write
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run prune script
+        run: |
+          bash .github/scripts/prune_submissions.sh "${{ github.event.inputs.preferred_languages }}"
+
+      - name: Commit and Push pruning
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add submissions || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(ci): prune submissions by preferred languages (${{ github.event.inputs.preferred_languages }})"
+          git pull --rebase origin main
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
