@@ -2,9 +2,9 @@
 
 | #   | Title                                      | Runtime   | Memory    |
 |-----|--------------------------------------------|-----------|-----------|
-| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | 0 ms | N/A |
-| 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 0 ms | N/A |
-| 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | 0 ms | N/A |
+| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | N/A | N/A |
+| 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | N/A | N/A |
+| 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | N/A | N/A |
 | 0013 | [Roman To Integer](https://leetcode.com/problems/roman-to-integer/) | 5 ms | N/A |
 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | 0 ms | N/A |
 | 0026 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 0 ms | N/A |
