@@ -11,7 +11,7 @@
 | 0028 | [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 0 ms | N/A |
 | 0069 | [Sqrtx](https://leetcode.com/problems/sqrtx/) | 1 ms | N/A |
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | 0 ms | N/A |
-| 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 7 ms | N/A |
+| 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 0 ms | N/A |
 | 0193 | [Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/) | 60 ms | N/A |
 | 0195 | [Tenth Line](https://leetcode.com/problems/tenth-line/) | 19 ms | N/A |
 | 0197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | 537 ms | N/A |
