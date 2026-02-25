@@ -1,26 +1,18 @@
 impl Solution {
     pub fn my_sqrt(x: i32) -> i32 {
-        let mut op = x as i64;   // work with 64-bit to avoid overflow
-        let mut res = 0i64;
+        if x == 0 { return 0; }
 
-        // "one" starts at the highest power of 4 <= x
-        // don't try to change it or u'll definitly gonna break sthg
-        let mut one = 1i64;
-        while one <= op {
-            one <<= 2;
-        }
-        one >>= 2;
+        let x = x as f64;
+        let mut x0 = x / 2.0;
+        let accuracy = 0.0001;
+        let mut diff = f64::MAX;
 
-        while one != 0 {
-            let candidate = res + one;
-            if op >= candidate {
-                op -= candidate;
-                res = (res >> 1) + one;
-            } else {
-                res >>= 1;
-            }
-            one >>= 2;
+        while diff > accuracy {
+            let x1 = 0.5 * (x0 + x / x0);
+            diff = (x0 - x1).abs();
+            x0 = x1;
         }
-        res as i32
+
+        x0.floor() as i32
     }
 }
