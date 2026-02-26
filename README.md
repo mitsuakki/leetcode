@@ -6,17 +6,17 @@
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | N/A | N/A |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | N/A | N/A |
 | 0013 | [Roman To Integer](https://leetcode.com/problems/roman-to-integer/) | 5 ms | N/A |
-| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | 0 ms | N/A |
+| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | N/A | N/A |
 | 0026 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 0 ms | N/A |
 | 0028 | [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 0 ms | N/A |
-| 0069 | [Sqrtx](https://leetcode.com/problems/sqrtx/) | 1 ms | N/A |
-| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | 0 ms | N/A |
-| 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 0 ms | N/A |
+| 0069 | [Sqrtx](https://leetcode.com/problems/sqrtx/) | N/A | N/A |
+| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | N/A | N/A |
+| 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | N/A | N/A |
 | 0193 | [Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/) | 60 ms | N/A |
 | 0195 | [Tenth Line](https://leetcode.com/problems/tenth-line/) | 19 ms | N/A |
 | 0197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | 537 ms | N/A |
 | 0226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 0 ms | N/A |
-| 0412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | 1 ms | N/A |
+| 0412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | N/A | N/A |
 | 0570 | [Managers With At Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/) | 395 ms | N/A |
 | 0577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/) | 1179 ms | N/A |
 | 0584 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | 665 ms | N/A |
@@ -31,6 +31,7 @@
 | 1390 | [Average Selling Price](https://leetcode.com/problems/average-selling-price/) | 743 ms | N/A |
 | 1415 | [Students And Examinations](https://leetcode.com/problems/students-and-examinations/) | 1097 ms | N/A |
 | 1421 | [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | 1 ms | N/A |
+| 1458 | [Sort Integers By The Number Of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | 0 ms | N/A |
 | 1509 | [Replace Employee Id With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | 1222 ms | N/A |
 | 1524 | [String Matching In An Array](https://leetcode.com/problems/string-matching-in-an-array/) | 4 ms | N/A |
 | 1724 | [Customer Who Visited But Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | 1540 ms | N/A |
