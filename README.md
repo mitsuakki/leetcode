@@ -5,11 +5,11 @@
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | N/A | N/A |
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | N/A | N/A |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | N/A | N/A |
-| 0013 | [Roman To Integer](https://leetcode.com/problems/roman-to-integer/) | 5 ms | N/A |
+| 0013 | [Roman To Integer](https://leetcode.com/problems/roman-to-integer/) | 0 ms | N/A |
 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | N/A | N/A |
 | 0026 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 0 ms | N/A |
 | 0028 | [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 0 ms | N/A |
-| 0069 | [Sqrtx](https://leetcode.com/problems/sqrtx/) | N/A | N/A |
+| 0069 | [Sqrtx](https://leetcode.com/problems/sqrtx/) | 0 ms | N/A |
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | N/A | N/A |
 | 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | N/A | N/A |
 | 0193 | [Valid Phone Numbers](https://leetcode.com/problems/valid-phone-numbers/) | 60 ms | N/A |
