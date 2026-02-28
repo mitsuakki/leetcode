@@ -33,6 +33,7 @@
 | 1421 | [Find Numbers With Even Number Of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | 1 ms | N/A |
 | 1458 | [Sort Integers By The Number Of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | 0 ms | N/A |
 | 1509 | [Replace Employee Id With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | 1222 ms | N/A |
+| 1520 | [Number Of Steps To Reduce A Number In Binary Representation To One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | 0 ms | N/A |
 | 1524 | [String Matching In An Array](https://leetcode.com/problems/string-matching-in-an-array/) | 4 ms | N/A |
 | 1724 | [Customer Who Visited But Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | 1540 ms | N/A |
 | 1773 | [Percentage Of Users Attended A Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest/) | 1233 ms | N/A |
