@@ -11,40 +11,16 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        map<int, int> freq;
+        if (list1 == nullptr) return list2;
+        if (list2 == nullptr) return list1;
 
-        // Compter les occurrences dans list1
-        ListNode* current = list1;
-        while (current != nullptr) {
-            freq[current->val]++;
-            current = current->next;
+        if (list1->val < list2->val)
+        {
+            list1->next = mergeTwoLists(list1->next, list2);
+            return list1;
+        } else {
+            list2->next = mergeTwoLists(list1, list2->next);
+            return list2;
         }
-
-        // Compter les occurrences dans list2
-        current = list2;
-        while (current != nullptr) {
-            freq[current->val]++;
-            current = current->next;
-        }
-
-        // Construire la liste résultante triée
-        ListNode* result = nullptr;
-        ListNode* tail = nullptr;
-
-        for (const auto& pair : freq) {
-            for (int i = 0; i < pair.second; i++) {
-                ListNode* node = new ListNode(pair.first);
-
-                if (result == nullptr) {
-                    result = node;
-                    tail = node;
-                } else {
-                    tail->next = node;
-                    tail = node;
-                }
-            }
-        }
-
-        return result;
     }
 };
