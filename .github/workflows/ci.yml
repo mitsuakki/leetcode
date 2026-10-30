@@ -1,0 +1,57 @@
+name: LeetCode Sync
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # every day at 6:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: leetcode-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      LEETCODE_USERNAME: ${{ vars.LEETCODE_USERNAME }}
+      SOLUTIONS_DIR: solutions
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # needed to read first-commit dates
+
+      - name: LeetCode Sync
+        uses: joshcai/leetcode-sync@v1.7
+        with:
+          github-token: ${{ github.token }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: solutions
+          filter-duplicate-secs: 86400
+          verbose: true
+
+      # The sync action pushes commits through the API, so fetch them locally.
+      - name: Pull synced solutions
+        run: git pull --rebase origin "${{ github.ref_name }}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Commit README
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .leetcode
+          if git diff --cached --quiet; then
+            echo "README is up to date"
+          else
+            git commit -m "docs: update LeetCode README"
+            git push
+          fi
